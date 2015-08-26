@@ -3,11 +3,13 @@ platform :ios, '7.0'
 
 target 'FunctionalProgram' do
 
-pod 'RXCollections', '~> 1.0'
+pod 'ReactiveCocoa', '2.5'
 
 end
 
 target 'FunctionalProgramTests' do
+
+pod 'ReactiveCocoa', '2.5'
 
 end
 

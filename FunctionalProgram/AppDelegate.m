@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <RXCollections/RXCollection.h>
 
 @interface AppDelegate ()
 
@@ -18,22 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSArray *array = @[@1, @2, @3];
-    NSArray *mappedArray = [array rx_mapWithBlock:^id(id each) {
-        return @(pow([each integerValue], 2));
-    }];
-    NSArray *filteredArray = [array rx_filterWithBlock:^BOOL(id each) {
-        return [each integerValue] % 2 == 0;
-    }];
-    NSNumber *sum = [array rx_foldWithBlock:^id(id memo, id each) {
-        return @([memo integerValue] + [each integerValue]);
-    }];
-    NSString *mergeString = [[array rx_mapWithBlock:^id(id each) {
-        return [each stringValue];
-    }] rx_foldInitialValue:@"merge:" block:^id(id memo, id each) {
-        return [memo stringByAppendingString:each];
-    }];
-    NSLog(@"%@", mergeString);
     return YES;
 }
 
