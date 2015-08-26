@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1E7DBA40BAEF661B76A00E /* libPods-FunctionalProgram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E43D293CE2201874A9B3C1A5 /* libPods-FunctionalProgram.a */; };
 		DF396FB71B8DB7C900F05871 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF396FB61B8DB7C900F05871 /* main.m */; };
 		DF396FBA1B8DB7C900F05871 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF396FB91B8DB7C900F05871 /* AppDelegate.m */; };
 		DF396FBD1B8DB7C900F05871 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF396FBC1B8DB7C900F05871 /* ViewController.m */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CEFB332309420DA7BE2124D0 /* Pods-FunctionalProgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalProgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunctionalProgram/Pods-FunctionalProgram.release.xcconfig"; sourceTree = "<group>"; };
 		DF396FB11B8DB7C800F05871 /* FunctionalProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunctionalProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF396FB51B8DB7C900F05871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF396FB61B8DB7C900F05871 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		DF396FCA1B8DB7C900F05871 /* FunctionalProgramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunctionalProgramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF396FCF1B8DB7C900F05871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF396FD01B8DB7C900F05871 /* FunctionalProgramTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionalProgramTests.m; sourceTree = "<group>"; };
+		E43D293CE2201874A9B3C1A5 /* libPods-FunctionalProgram.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FunctionalProgram.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D776D4DB31975B05AD5214 /* Pods-FunctionalProgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalProgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunctionalProgram/Pods-FunctionalProgram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB1E7DBA40BAEF661B76A00E /* libPods-FunctionalProgram.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E096CDCF14EB316159AAEF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8D776D4DB31975B05AD5214 /* Pods-FunctionalProgram.debug.xcconfig */,
+				CEFB332309420DA7BE2124D0 /* Pods-FunctionalProgram.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DF396FA81B8DB7C800F05871 = {
 			isa = PBXGroup;
 			children = (
 				DF396FB31B8DB7C900F05871 /* FunctionalProgram */,
 				DF396FCD1B8DB7C900F05871 /* FunctionalProgramTests */,
 				DF396FB21B8DB7C800F05871 /* Products */,
+				1E096CDCF14EB316159AAEF1 /* Pods */,
+				F01C05E17E785E80905B970D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +135,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F01C05E17E785E80905B970D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E43D293CE2201874A9B3C1A5 /* libPods-FunctionalProgram.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF396FD41B8DB7C900F05871 /* Build configuration list for PBXNativeTarget "FunctionalProgram" */;
 			buildPhases = (
+				EE75AC26B00231CF54EBAC4E /* Check Pods Manifest.lock */,
 				DF396FAD1B8DB7C800F05871 /* Sources */,
 				DF396FAE1B8DB7C800F05871 /* Frameworks */,
 				DF396FAF1B8DB7C800F05871 /* Resources */,
+				F149E8EC145AF7E7A38633B6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EE75AC26B00231CF54EBAC4E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F149E8EC145AF7E7A38633B6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FunctionalProgram/Pods-FunctionalProgram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DF396FAD1B8DB7C800F05871 /* Sources */ = {
@@ -345,9 +404,12 @@
 		};
 		DF396FD51B8DB7C900F05871 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8D776D4DB31975B05AD5214 /* Pods-FunctionalProgram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = FunctionalProgram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -355,9 +417,12 @@
 		};
 		DF396FD61B8DB7C900F05871 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEFB332309420DA7BE2124D0 /* Pods-FunctionalProgram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = FunctionalProgram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +481,7 @@
 				DF396FD61B8DB7C900F05871 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF396FD71B8DB7C900F05871 /* Build configuration list for PBXNativeTarget "FunctionalProgramTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +490,7 @@
 				DF396FD91B8DB7C900F05871 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
