@@ -11,6 +11,9 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIButton *button;
+
 @end
 
 @implementation ViewController
@@ -35,6 +38,28 @@
     }] foldLeftWithStart:@"" reduce:^id(id accumulator, id value) {
         return [accumulator stringByAppendingString:value];
     }]);
+    
+    [self.textField.rac_textSignal subscribeNext:^(id x) {
+        NSLog(@"New Value: %@", x);
+    } error:^(NSError *error) {
+        NSLog(@"Error: %@", error);
+    } completed:^{
+        NSLog(@"Completed.");
+    }];
+    
+    RACSignal *validEmailSignal = [self.textField.rac_textSignal map:^id(NSString *value) {
+        return @([value rangeOfString:@"@"].location != NSNotFound);
+    }];
+    
+    RAC(self.button, enabled) = validEmailSignal;
+    
+    RAC(self.textField, textColor) = [validEmailSignal map:^id(id value) {
+        if ([value boolValue]) {
+            return [UIColor greenColor];
+        } else {
+            return [UIColor redColor];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
