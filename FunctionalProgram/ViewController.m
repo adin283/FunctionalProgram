@@ -51,7 +51,11 @@
         return @([value rangeOfString:@"@"].location != NSNotFound);
     }];
     
-    RAC(self.button, enabled) = validEmailSignal;
+//    RAC(self.button, enabled) = validEmailSignal;
+    self.button.rac_command = [[RACCommand alloc] initWithEnabled:validEmailSignal signalBlock:^RACSignal *(id input) {
+        NSLog(@"Button pressed.");
+        return [RACSignal empty];
+    }];
     
     RAC(self.textField, textColor) = [validEmailSignal map:^id(id value) {
         if ([value boolValue]) {
